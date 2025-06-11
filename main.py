@@ -5,5 +5,5 @@ app = FastAPI()
 @app.post("/")
 async def root(request: Request):
     data = await request.json()
-    # Acá después sumás lógica con prompts.json, memoria, etc.
+    print("MENSAJE RECIBIDO:", data)   # Este print lo ves en los logs de Render
     return {"msg": "PG-One responde", "data": data}
